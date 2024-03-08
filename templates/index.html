@@ -1,0 +1,14 @@
+<form method="POST">
+    <select name="selected_blob">
+        {% for blob in blob_list %}
+        <option value="{{ blob.name }}" {% if selected_blob==blob.name %}selected{% endif %}>{{ blob.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Select">
+</form>
+
+{% if selected_blob %}
+<audio controls>
+    <source src="{{ url_for('serve_audio', filename=selected_blob) }}" type="audio/mpeg">
+</audio>
+{% endif %}
