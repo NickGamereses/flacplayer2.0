@@ -7,11 +7,11 @@ app = Flask(__name__)
 # Define your blob_service_client here
 connection_string = "DefaultEndpointsProtocol=https;AccountName=blobstorageformp3player;AccountKey=Xb52Hg1E/N/FD+txtai3RMST9A91kwNacbQUqskC4ut3m54LT68kc+Xyl87lCi3VN5/6N4HTy78a+AStYNUcIg==;EndpointSuffix=core.windows.net"
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+container_name = "files"  # Define your container_name here
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    container_name = "files"
     container_client = blob_service_client.get_container_client(container_name)
 
     blob_list = container_client.list_blobs()

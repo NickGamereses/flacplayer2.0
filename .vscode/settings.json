@@ -1,0 +1,7 @@
+{
+    "python.analysis.cacheFolderPath": "‪E:\\python 3.11\\",
+    "python.analysis.autoSearchPaths": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
+}
