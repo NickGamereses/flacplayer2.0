@@ -4,5 +4,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "appService.defaultWebAppToDeploy": "/subscriptions/fdefc389-af85-4a19-8c39-118b3b3c06aa/resourceGroups/msdocs-python-webapp-quickstart-094_group/providers/Microsoft.Web/sites/msdocs-python-webapp-quickstart-094",
+    "appService.deploySubpath": "."
 }
